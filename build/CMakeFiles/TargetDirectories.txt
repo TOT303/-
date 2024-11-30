@@ -1,0 +1,3 @@
+/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/build/CMakeFiles/main.dir
+/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/build/CMakeFiles/edit_cache.dir
+/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/build/CMakeFiles/rebuild_cache.dir

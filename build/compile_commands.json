@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/build",
+  "command": "/usr/bin/c++  -I/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/include -isystem /usr/local/opencv4.5.4/include/opencv4 -g -o CMakeFiles/main.dir/src/test.cpp.o -c /mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/src/test.cpp",
+  "file": "/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/src/test.cpp"
+},
+{
+  "directory": "/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/build",
+  "command": "/usr/bin/c++  -I/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/include -isystem /usr/local/opencv4.5.4/include/opencv4 -g -o CMakeFiles/main.dir/src/find.cpp.o -c /mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/src/find.cpp",
+  "file": "/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/src/find.cpp"
+},
+{
+  "directory": "/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/build",
+  "command": "/usr/bin/c++  -I/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/include -isystem /usr/local/opencv4.5.4/include/opencv4 -g -o CMakeFiles/main.dir/main.cpp.o -c /mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/main.cpp",
+  "file": "/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/main.cpp"
+}
+]
