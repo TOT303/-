@@ -76,11 +76,9 @@ Point2f zhixin(vector<Point> &contour){           //找质心
 vector<vector<Point>> xiuxing(vector<vector<Point>> c){   //修形
     vector<vector<Point>> x_c;
     for (int i=0;i<c.size();i++){
-        if (c[i].size()>4){
-            vector<Point> v=c[i];
-            approxPolyDP(c[i],v,30,true);
-            x_c.push_back(v);
-        }
+        vector<Point> v=c[i];
+        approxPolyDP(c[i],v,8,true);
+        x_c.push_back(v);
     }
     
     return x_c;
@@ -92,6 +90,9 @@ vector<vector<Point>> xiuxing(vector<vector<Point>> c){   //修形
 vector<Point2f> find_tripoint(vector<vector<Point>> &c){
     vector<vector<Point>> x_c=xiuxing(c);
     vector<Point> t_contour;
+    // Mat contourimg=Mat::zeros(800,800, CV_8UC3);
+    // drawContours(contourimg,x_c,-1,Scalar(255,255,255),1);
+    // show("contour",contourimg);
 
     for (int i=0;i<x_c.size();i++){
         if (x_c[i].size()==4){

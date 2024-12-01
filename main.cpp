@@ -2,7 +2,7 @@
 #include<iostream>
 
 int main(){
-    Mat image=imread("/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/image/20212423962.jpg");
+    Mat image=imread("/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/image/20211839746.jpg");
     // show("原图",image);
     Mat dst=yuchuli(image);
     // show("1",dst);
