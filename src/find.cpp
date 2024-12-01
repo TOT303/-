@@ -2,16 +2,14 @@
 
 
 
-
-
 float calcu_angle(Point AB,Point AC){
     double dotProduct = AB.x * AC.x + AB.y * AC.y;
     double crossProduct = AB.x*AC.y-AB.y*AC.x;
-        
-    double normAB = sqrt(AB.x * AB.x + AB.y * AB.y);
-    double normBC = sqrt(AC.x * AC.x + AC.y * AC.y);
 
     double cosTheta = dotProduct / (norm(AB) * norm(AC)); // 计算角度
+    if (cosTheta <= -1 || cosTheta >= 1) {
+        return 0.0; 
+    }
     double angle = acos(cosTheta);
     angle = angle * 180.0 / CV_PI;
 
@@ -29,10 +27,11 @@ Point2f find_basepoint(vector<vector<Point>> &c){
             base_p=zhixin(c[i]);     //找到基点
         }
     }
-    cout<<base_p<<" p"<<endl;
     return base_p;
     
 }
+
+
 
 
 vector<float> find_angle(vector<Point2f> &p,Point2f base_point){    //找轮廓质心的角度
@@ -54,17 +53,9 @@ vector<float> find_angle(vector<Point2f> &p,Point2f base_point){    //找轮廓�
         float angle;
         angle=calcu_angle(AB,AC);
         angles.push_back(angle);
-        cout<<angle<<" ";
     }
     return angles;
 }  
-
-
-
-
-
-
-
 
 
 
@@ -82,33 +73,37 @@ Point2f zhixin(vector<Point> &contour){           //找质心
 }
 
 
-void xiuxing(vector<vector<Point>>& c){   //修形
+vector<vector<Point>> xiuxing(vector<vector<Point>> c){   //修形
+    vector<vector<Point>> x_c;
     for (int i=0;i<c.size();i++){
         if (c[i].size()>4){
             vector<Point> v=c[i];
-            approxPolyDP(c[i],v,15,true);
-            c[i]=v;
+            approxPolyDP(c[i],v,30,true);
+            x_c.push_back(v);
         }
     }
+    
+    return x_c;
 }
 
 
 
 
-
-
 vector<Point2f> find_tripoint(vector<vector<Point>> &c){
-    xiuxing(c);
+    vector<vector<Point>> x_c=xiuxing(c);
     vector<Point> t_contour;
-    for (int i=0;i<c.size();i++){
-        if (c[i].size()==4){
-            if (norm(c[i][0] - c[i][1])>=50||norm(c[i][1] - c[i][2])>=50){ //确定三角所在的轮廓
-                t_contour=c[i]; 
+
+    for (int i=0;i<x_c.size();i++){
+        if (x_c[i].size()==4){
+            if (norm(x_c[i][0] - x_c[i][1])>=70||norm(x_c[i][1] - x_c[i][2])>=70){ //确定三角所在的轮廓
+                t_contour=x_c[i]; 
             }
         }
     }
+
     Point center;
     Point t_center;
+
     center=zhixin(t_contour);  //三角的质心
     float mindis=INT_MAX;
     for (int j=0;j<t_contour.size();j++){
@@ -143,7 +138,7 @@ vector<Point2f> find_rectpoint(vector<vector<Point>> &c){
     vector<Point2f> zx;
     vector<vector<Point>> r_contours;
     for (int j=0;j<c.size();j++){
-        if (norm(c[j][0] - c[j][1])>=50||norm(c[j][1] - c[j][2])>=50){ //确定三角所在的轮廓
+        if (norm(c[j][0] - c[j][1])>=70||norm(c[j][1] - c[j][2])>=70){ //确定三角所在的轮廓
             continue; 
         }
         r_contours.push_back(c[j]);

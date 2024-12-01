@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/main.cpp" "CMakeFiles/main.dir/main.cpp.o" "gcc" "CMakeFiles/main.dir/main.cpp.o.d"
   "/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/src/find.cpp" "CMakeFiles/main.dir/src/find.cpp.o" "gcc" "CMakeFiles/main.dir/src/find.cpp.o.d"
+  "/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/src/pnp.cpp" "CMakeFiles/main.dir/src/pnp.cpp.o" "gcc" "CMakeFiles/main.dir/src/pnp.cpp.o.d"
   "/mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/src/test.cpp" "CMakeFiles/main.dir/src/test.cpp.o" "gcc" "CMakeFiles/main.dir/src/test.cpp.o.d"
   )
 

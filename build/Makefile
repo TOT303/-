@@ -177,6 +177,30 @@ src/find.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/find.cpp.s
 .PHONY : src/find.cpp.s
 
+src/pnp.o: src/pnp.cpp.o
+.PHONY : src/pnp.o
+
+# target to build an object file
+src/pnp.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/pnp.cpp.o
+.PHONY : src/pnp.cpp.o
+
+src/pnp.i: src/pnp.cpp.i
+.PHONY : src/pnp.i
+
+# target to preprocess a source file
+src/pnp.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/pnp.cpp.i
+.PHONY : src/pnp.cpp.i
+
+src/pnp.s: src/pnp.cpp.s
+.PHONY : src/pnp.s
+
+# target to generate assembly for a file
+src/pnp.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/main.dir/build.make CMakeFiles/main.dir/src/pnp.cpp.s
+.PHONY : src/pnp.cpp.s
+
 src/test.o: src/test.cpp.o
 .PHONY : src/test.o
 
@@ -216,6 +240,9 @@ help:
 	@echo "... src/find.o"
 	@echo "... src/find.i"
 	@echo "... src/find.s"
+	@echo "... src/pnp.o"
+	@echo "... src/pnp.i"
+	@echo "... src/pnp.s"
 	@echo "... src/test.o"
 	@echo "... src/test.i"
 	@echo "... src/test.s"

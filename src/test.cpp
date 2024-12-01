@@ -20,15 +20,6 @@ Mat yuchuli(const Mat &image){
     return mask_red;
 }
 
-Mat chuli(const Mat &image){                             //处理
-    
-    Mat gray;
-    cvtColor(image,gray,COLOR_BGR2GRAY);
-    Mat dst;
-    threshold(gray,dst,50,255,THRESH_BINARY);
-    return dst;
-
-}
 
 vector<vector<Point>> find_contour(const Mat &image){    //轮廓
     vector<vector<Point>> contour;
@@ -37,7 +28,7 @@ vector<vector<Point>> find_contour(const Mat &image){    //轮廓
     for (int i=0;i<contour.size();i++){
         std::vector<cv::Point> approx;     // 用于存储单个轮廓近似后的点
         double epsilon = 5;                // 近似精度，可能需要根据实际情况调整
-        cv::approxPolyDP(contour[i], approx, 8, true);   // 多边形近似
+        cv::approxPolyDP(contour[i], approx, 5, true);   // 多边形近似
 
         if (approx.size() > 0) {        // 如果近似后的轮廓不为空，则添加到结果中
             jinsi.push_back(approx);
