@@ -7,7 +7,6 @@ vector<vector<Mat>> pnp(vector<cv::Point3f> objectPoints,vector<cv::Point2f> ima
     cv::Mat rvec, tvec;
     bool success = cv::solvePnP(objectPoints, imagePoints, cameraMatrix, distCoeffs, rvec, tvec);
     if (success) {
-        // 位姿求解成功，rvec是旋转向量，tvec是平移向量
         std::cout << "Rotation Vector: " << rvec << std::endl;
         std::cout << "Translation Vector: " << tvec << std::endl;
     } else {

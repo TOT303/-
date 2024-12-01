@@ -25,5 +25,5 @@ vector<Point2f> find_tripoint(vector<vector<Point>> &c);
 
 vector<Point2f> find_rectpoint(vector<vector<Point>> &c);
 
-
+vector<vector<Mat>> pnp(vector<cv::Point3f> objectPoints,vector<cv::Point2f> imagePoints,Mat cameraMatrix,Mat distCoeffs);
 #endif
