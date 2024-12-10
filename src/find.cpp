@@ -20,16 +20,41 @@ float calcu_angle(Point AB,Point AC){
     return angle;
 }
 
-Point2f find_basepoint(vector<vector<Point>> &c){
-    Point2f base_p;
-    for (int i=0;i<c.size();i++){
-        if (c[i].size()==3){
-            base_p=zhixin(c[i]);     //找到基点
+Point2f find_basepoint(vector<vector<Point>> c) {
+    Point2f base_p = {0, 0};
+    float min_area = MAXFLOAT;
+
+    // 创建空白图像
+    int width = 2000;  // 根据需要调整宽度
+    int height = 2000; // 根据需要调整高度
+    Mat blankImage(height, width, CV_8UC3, Scalar(0, 0, 0));
+
+    for (int i=0;i<c.size();i++) {
+        if (c[i].size() < 3) {
+            continue;
         }
+
+        RotatedRect minRect = cv::minAreaRect(c[i]);
+        float area = minRect.size.width * minRect.size.height;
+
+        if (area < min_area) {
+            min_area = area;
+            base_p = zhixin(c[i]);
+        }
+        //绘制外接矩形
+    //     Point2f rect_points[4];
+    //     minRect.points(rect_points);
+    //     for (int j = 0; j < 4; j++) {
+    //         line(blankImage, rect_points[j], rect_points[(j + 1) % 4], Scalar(0, 255, 0), 2);
+    //     }
+    
+    // }
+    // show("blankImage",blankImage);
     }
     return base_p;
     
 }
+    
 
 
 
@@ -73,11 +98,11 @@ Point2f zhixin(vector<Point> &contour){           //找质心
 }
 
 
-vector<vector<Point>> xiuxing(vector<vector<Point>> c){   //修形
+vector<vector<Point>> xiuxing(vector<vector<Point>> c,int t){   //修形
     vector<vector<Point>> x_c;
     for (int i=0;i<c.size();i++){
         vector<Point> v=c[i];
-        approxPolyDP(c[i],v,8,true);
+        approxPolyDP(c[i],v,t,true);
         x_c.push_back(v);
     }
     
@@ -139,7 +164,7 @@ vector<Point2f> find_rectpoint(vector<vector<Point>> &c){
     vector<Point2f> zx;
     vector<vector<Point>> r_contours;
     for (int j=0;j<c.size();j++){
-        if (norm(c[j][0] - c[j][1])>=70||norm(c[j][1] - c[j][2])>=70){ //确定三角所在的轮廓
+        if (norm(c[j][0] - c[j][1])>=70||norm(c[j][1] - c[j][2])>=70){ //排除三角所在的轮廓
             continue; 
         }
         r_contours.push_back(c[j]);
@@ -157,8 +182,13 @@ vector<Point2f> find_rectpoint(vector<vector<Point>> &c){
             }
         }
     }
-    for (int k=0;k<zx.size();k++){
-        cout<<zx[k]<<endl;
-    }
+    // for (int k=0;k<zx.size();k++){
+    //     cout<<zx[k]<<endl;
+    // }
     return zx;
 }
+
+
+
+
+

@@ -354,4 +354,5 @@ CMakeFiles/main.dir/src/test.cpp.o: \
  /usr/local/opencv4.5.4/include/opencv4/opencv2/stitching/detail/camera.hpp \
  /usr/local/opencv4.5.4/include/opencv4/opencv2/video.hpp \
  /usr/local/opencv4.5.4/include/opencv4/opencv2/video/tracking.hpp \
- /usr/local/opencv4.5.4/include/opencv4/opencv2/video/background_segm.hpp
+ /usr/local/opencv4.5.4/include/opencv4/opencv2/video/background_segm.hpp \
+ /mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/include/pnp.h

@@ -413,7 +413,8 @@ CMakeFiles/main.dir/main.cpp.o: ../main.cpp \
   /usr/local/opencv4.5.4/include/opencv4/opencv2/stitching/detail/camera.hpp \
   /usr/local/opencv4.5.4/include/opencv4/opencv2/video.hpp \
   /usr/local/opencv4.5.4/include/opencv4/opencv2/video/tracking.hpp \
-  /usr/local/opencv4.5.4/include/opencv4/opencv2/video/background_segm.hpp
+  /usr/local/opencv4.5.4/include/opencv4/opencv2/video/background_segm.hpp \
+  ../include/pnp.h
 
 CMakeFiles/main.dir/src/find.cpp.o: ../src/find.cpp \
   /usr/include/stdc-predef.h \
@@ -831,7 +832,7 @@ CMakeFiles/main.dir/src/find.cpp.o: ../src/find.cpp \
 
 CMakeFiles/main.dir/src/pnp.cpp.o: ../src/pnp.cpp \
   /usr/include/stdc-predef.h \
-  ../include/test.h \
+  ../include/pnp.h \
   /usr/local/opencv4.5.4/include/opencv4/opencv2/opencv.hpp \
   /usr/local/opencv4.5.4/include/opencv4/opencv2/opencv_modules.hpp \
   /usr/local/opencv4.5.4/include/opencv4/opencv2/core.hpp \
@@ -1241,7 +1242,8 @@ CMakeFiles/main.dir/src/pnp.cpp.o: ../src/pnp.cpp \
   /usr/local/opencv4.5.4/include/opencv4/opencv2/stitching/detail/camera.hpp \
   /usr/local/opencv4.5.4/include/opencv4/opencv2/video.hpp \
   /usr/local/opencv4.5.4/include/opencv4/opencv2/video/tracking.hpp \
-  /usr/local/opencv4.5.4/include/opencv4/opencv2/video/background_segm.hpp
+  /usr/local/opencv4.5.4/include/opencv4/opencv2/video/background_segm.hpp \
+  ../include/test.h
 
 CMakeFiles/main.dir/src/test.cpp.o: ../src/test.cpp \
   /usr/include/stdc-predef.h \
@@ -1655,7 +1657,8 @@ CMakeFiles/main.dir/src/test.cpp.o: ../src/test.cpp \
   /usr/local/opencv4.5.4/include/opencv4/opencv2/stitching/detail/camera.hpp \
   /usr/local/opencv4.5.4/include/opencv4/opencv2/video.hpp \
   /usr/local/opencv4.5.4/include/opencv4/opencv2/video/tracking.hpp \
-  /usr/local/opencv4.5.4/include/opencv4/opencv2/video/background_segm.hpp
+  /usr/local/opencv4.5.4/include/opencv4/opencv2/video/background_segm.hpp \
+  ../include/pnp.h
 
 
 ../src/pnp.cpp:
@@ -1923,6 +1926,8 @@ CMakeFiles/main.dir/src/test.cpp.o: ../src/test.cpp \
 /usr/include/c++/11/bits/refwrap.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+../include/pnp.h:
 
 /usr/local/opencv4.5.4/include/opencv4/opencv2/flann/ground_truth.h:
 

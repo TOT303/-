@@ -415,6 +415,7 @@ CMakeFiles/main.dir/main.cpp.o
  /usr/local/opencv4.5.4/include/opencv4/opencv2/video.hpp
  /usr/local/opencv4.5.4/include/opencv4/opencv2/video/tracking.hpp
  /usr/local/opencv4.5.4/include/opencv4/opencv2/video/background_segm.hpp
+ /mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/include/pnp.h
 
 CMakeFiles/main.dir/src/find.cpp.o
  /mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/src/find.cpp
@@ -834,7 +835,7 @@ CMakeFiles/main.dir/src/find.cpp.o
 CMakeFiles/main.dir/src/pnp.cpp.o
  /mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/src/pnp.cpp
  /usr/include/stdc-predef.h
- /mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/include/test.h
+ /mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/include/pnp.h
  /usr/local/opencv4.5.4/include/opencv4/opencv2/opencv.hpp
  /usr/local/opencv4.5.4/include/opencv4/opencv2/opencv_modules.hpp
  /usr/local/opencv4.5.4/include/opencv4/opencv2/core.hpp
@@ -1245,6 +1246,7 @@ CMakeFiles/main.dir/src/pnp.cpp.o
  /usr/local/opencv4.5.4/include/opencv4/opencv2/video.hpp
  /usr/local/opencv4.5.4/include/opencv4/opencv2/video/tracking.hpp
  /usr/local/opencv4.5.4/include/opencv4/opencv2/video/background_segm.hpp
+ /mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/include/test.h
 
 CMakeFiles/main.dir/src/test.cpp.o
  /mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/src/test.cpp
@@ -1660,4 +1662,5 @@ CMakeFiles/main.dir/src/test.cpp.o
  /usr/local/opencv4.5.4/include/opencv4/opencv2/video.hpp
  /usr/local/opencv4.5.4/include/opencv4/opencv2/video/tracking.hpp
  /usr/local/opencv4.5.4/include/opencv4/opencv2/video/background_segm.hpp
+ /mnt/b/wsl/LabelRoboMasterTJU/新建文件夹/include/pnp.h
 
